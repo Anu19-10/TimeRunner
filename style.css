@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242425;
+}
+
+/* center screen */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* WATCH BODY */
+.box {
+  position: relative;
+
+  width: 380px;
+  height: 140px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(180deg, #1c2a2a, #182121);
+  border: 2px solid #e7ff59;
+  border-radius: 12px;
+
+  color:antiquewhite;
+  font-size: 42px;
+  font-family: "Segoe UI", monospace;
+  letter-spacing: 2px;
+
+  box-shadow: 0 0 20px rgba(231, 255, 89, 0.35);
+}
+
+/* LEFT DOTS */
+.box::before {
+  content: "•\A•\A•";
+  white-space: pre;
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e8f8f8;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+/* BOTTOM GLOW BAR */
+.box::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  width: 140px;
+  height: 8px;
+  background: #e7ff59;
+  border-radius: 10px;
+  box-shadow: 0 0 18px #e7ff59;
+}
